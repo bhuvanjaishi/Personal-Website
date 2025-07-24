@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills | BhuOne Joshi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navbar -->
+  <div id="navbar">
+    <div id="navdiv">
+      <div id="logo">BhuOne Joshi</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div id="skill-header">
+  <h1>My Skills</h1>
+  <p>Technologies and tools I’m proficient in</p>
+</div>
+
+<div id="skills-section">
+  <h2>Technical Skills</h2>
+  <div id="skills-list">
+
+    <div class="skill-item">
+      <span class="skill-name">HTML5</span>
+      <div class="skill-bar"><div class="skill-level" style="width: 90%; background-color: #e44d26;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span class="skill-name">CSS3</span>
+      <div class="skill-bar"><div class="skill-level" style="width: 85%; background-color: #264de4;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span class="skill-name">JavaScript</span>
+      <div class="skill-bar"><div class="skill-level" style="width: 75%; background-color: #f0db4f;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span class="skill-name">PHP</span>
+      <div class="skill-bar"><div class="skill-level" style="width: 70%; background-color: #8892be;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span class="skill-name">MySQL</span>
+      <div class="skill-bar"><div class="skill-level" style="width: 65%; background-color: #00758f;"></div></div>
+    </div>
+
+    <div class="skill-item">
+      <span class="skill-name">Git & GitHub</span>
+      <div class="skill-bar"><div class="skill-level" style="width: 80%; background-color: #f1502f;"></div></div>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div id="footer-container">
+      <div id="footer-about">
+        <h3>Bhuone Joshi</h3>
+        <p>Web Developer | Programmer | Frontend & Backend Developer | Tech Enthusiast</p>
+        <p>Creating elegant and responsive websites to help you shine online.</p>
+      </div>
+
+      <div id="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div id="footer-contact">
+        <h4>Contact Info</h4>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhuonejoshi123@gmail.com" target="_blank">bhuonejoshi123@gmail.com</a></p>
+        <p>Phone: +977 9860132003</p>
+        <p>Location: Kathmandu, Nepal</p>
+      </div>
+    </div>
+
+    <div id="footer-bottom">
+      &copy; 2025 BhuOne Joshi. All rights reserved.
+    </div>
+  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const skillLevels = document.querySelectorAll(".skill-level");
+
+    // Animate the skill bars width from 0 to their current width smoothly
+    skillLevels.forEach(skill => {
+      const fullWidth = skill.style.width;
+      skill.style.width = "0";
+      skill.style.transition = "width 1.5s ease-in-out";
+
+      // Trigger the animation after a short delay
+      setTimeout(() => {
+        skill.style.width = fullWidth;
+      }, 100);
+    });
+
+    // Optional: Highlight skill name on hover
+    const skillItems = document.querySelectorAll(".skill-item");
+    skillItems.forEach(item => {
+      item.addEventListener("mouseenter", () => {
+        item.querySelector(".skill-name").style.color = "#f39c12";
+      });
+      item.addEventListener("mouseleave", () => {
+        item.querySelector(".skill-name").style.color = "";
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

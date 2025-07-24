@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | BhuOne Joshi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar">
+    <div id="navdiv">
+      <div id="logo">BhuOne Joshi</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div id="about-header">
+    <h1>About BhuOne Joshi</h1>
+    <p>Web Developer | Creative Thinker | Lifelong Learner</p>
+  </div>
+
+  <div id="about-section">
+    <h2>Who I Am</h2>
+    <p>
+      Hello! I'm <strong>BhuOne Joshi</strong>, a passionate and detail-oriented web developer from Nepal. With a strong foundation in front-end and back-end technologies, I build clean, responsive, and user-friendly websites. My journey started from curiosity and turned into a full-fledged love for design and development.
+    </p>
+    <p>
+      I am currently pursuing my Bachelor's in Computer Applications (BCA), and I’m constantly exploring new frameworks, tools, and best practices. I believe in creating not just websites but immersive digital experiences that solve real-world problems.
+    </p>
+    <p>
+      Apart from coding, I love spending time in nature, reading tech blogs, and staying updated with industry trends. I value hard work, consistency, and collaboration.
+    </p>
+  </div>
+
+  <div id="skills">
+    <h2>My Skills</h2>
+    <div id="skills-list">
+      <div id="skill">Website and Web App Developer</div>
+      <div id="skill">HTML5 & CSS3</div>
+      <div id="skill">JavaScript (ES6+)</div>
+      <div id="skill">PHP & MySQL</div>
+      <div id="skill">UI / UX Developer</div>
+      
+    </div>
+  </div>
+ 
+    
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div id="footer-container">
+      <div id="footer-about">
+        <h3>Bhuone Joshi</h3>
+        <p>Web Developer | Programmer | Frontend & Backend Developer | Tech Enthusiast</p>
+        <p>Creating elegant and responsive websites to help you shine online.</p>
+      </div>
+
+      <div id="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div id="footer-contact">
+        <h4>Contact Info</h4>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhuonejoshi123@gmail.com" target="_blank">bhuonejoshi123@gmail.com</a></p>
+        <p>Phone: +977 9860132003</p>
+        <p>Location: Kathmandu, Nepal</p>
+      </div>
+    </div>
+
+    <div id="footer-bottom">
+      &copy; 2025 BhuOne Joshi. All rights reserved.
+    </div>
+  </footer>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Typed Text Effect for about-header h1
+    const header = document.querySelector("#about-header h1");
+    const fullText = header.textContent;
+    header.textContent = "";
+    let index = 0;
+    function typeWriter() {
+      if(index < fullText.length) {
+        header.textContent += fullText.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    typeWriter();
+
+    // 2. Toggle extra info button for "Who I Am" section
+    const aboutSection = document.getElementById("about-section");
+    const paragraphs = aboutSection.querySelectorAll("p");
+    // Hide the last paragraph initially
+    paragraphs[paragraphs.length - 1].style.display = "none";
+
+    // Create toggle button
+    const toggleBtn = document.createElement("button");
+    toggleBtn.textContent = "Show More";
+    toggleBtn.style.margin = "15px 0";
+    toggleBtn.style.padding = "8px 12px";
+    toggleBtn.style.cursor = "pointer";
+    aboutSection.appendChild(toggleBtn);
+
+    toggleBtn.addEventListener("click", () => {
+      const lastPara = paragraphs[paragraphs.length - 1];
+      if(lastPara.style.display === "none") {
+        lastPara.style.display = "block";
+        toggleBtn.textContent = "Show Less";
+      } else {
+        lastPara.style.display = "none";
+        toggleBtn.textContent = "Show More";
+      }
+    });
+
+    // 3. Navbar active link on scroll
+    window.addEventListener("scroll", () => {
+      const sections = ["about-header", "about-section", "skills", "footer"];
+      const navLinks = document.querySelectorAll("#navbar nav ul li a");
+
+      let currentSection = "";
+      sections.forEach(id => {
+        const section = document.getElementById(id);
+        if(section) {
+          const top = section.getBoundingClientRect().top;
+          if(top <= 100) currentSection = id;
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if(link.getAttribute("href").includes(currentSection)) {
+          link.classList.add("active");
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

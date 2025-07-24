@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Form Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="contact-page">
+<form id="contactForm">
+  <input type="text" name="name" placeholder="Please enter your full name" required />
+  <input type="email" name="email" placeholder="Please enter your Email" required />
+  <input type="text" name="contact" placeholder="Please enter your contact" required />
+  <input type="text" name="address" placeholder="Please enter your address" required />
+  <textarea name="message" placeholder="Message" required></textarea>
+  <input type="hidden" name="_captcha" value="false" />
+  <button type="submit">Send Message</button>
+</form>
+</div>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Stop default form action
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://formsubmit.co/bhuonejoshi123@gmail.com", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Contact form submitted successfully ✅");
+        window.location.href = "index.html"; // Redirect after OK
+      } else {
+        alert("Form submission failed. Please try again.");
+      }
+    })
+    .catch(error => {
+      alert("Something went wrong. Try again.");
+    });
+  });
+</script>
+
+</body>
+</html>

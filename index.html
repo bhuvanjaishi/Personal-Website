@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar">
+    <div id="navdiv">
+      <div id="logo">BhuOne Joshi</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Home Section -->
+   <div id="body">
+  <section id="home">
+    <div id="home-content">
+      <div id="text-content">
+        <h1>Hello, I'm <span id="highlight">BhuOne Joshi</span></h1>
+        <h2>Web Developer | Programmer | Frontend & Backend Developer | Tech Enthusiast!</h2>
+        <p>
+          Welcome to my personal space on the internet. I’m passionate about crafting clean and responsive websites
+          using modern technologies. I love solving problems with code and turning creative ideas into digital realities.
+          With a strong foundation in HTML, CSS, JavaScript, and backend tools like PHP and MySQL, I strive to deliver
+          elegant and effective web solutions.
+        </p>
+        <p>
+          Whether you’re a business looking for a digital presence, a startup in need of a developer, or a curious
+          visitor wanting to learn more — you're in the right place.
+        </p>
+
+        <div id="home-buttons">
+          <a href="portfolio.html" id="primary-btn">View Portfolio</a>
+          <a href="contact.html" id="secondary-btn">Contact Me</a>
+        </div>
+
+        <div id="social-links">
+          <a href="https://www.facebook.com/cristiano.georgina.2025" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/cristiano_bhuone_7?igsh=YnBkcTdva3FmbWc4" target="_blank">Instagram</a>
+          <a href="https://x.com/BhuvanJaishi/status/1638425250089308161?t=e6yaSwVwRo0xvhJVRfQOjg&s=19">Twitter</a>
+        </div>
+      </div>
+
+      <div id="image-content">
+        <img src="img/img for home page .jpg" alt="BhuOne Joshi" />
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div id="footer-container">
+      <div id="footer-about">
+        <h3>Bhuone Joshi</h3>
+        <p>Web Developer | Programmer | Frontend & Backend Developer | Tech Enthusiast</p>
+        <p>Creating elegant and responsive websites to help you shine online.</p>
+      </div>
+
+      <div id="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div id="footer-contact">
+        <h4>Contact Info</h4>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhuonejoshi123@gmail.com" target="_blank">bhuonejoshi123@gmail.com</a></p>
+        <p>Phone: +977 9860132003</p>
+        <p>Location: Kathmandu, Nepal</p>
+      </div>
+      
+    </div>
+
+    <div id="footer-bottom">
+      &copy; 2025 BhuOne Joshi. All rights reserved.
+    </div>
+  </footer>
+
+
+  
+  <script>
+  const highlightSpan = document.getElementById('highlight');
+  const fullText = "BhuOne Joshi";
+  let index = 0;
+
+  // Clear existing text
+  highlightSpan.textContent = '';
+
+  function scrollName() {
+    if (index < fullText.length) {
+      highlightSpan.textContent += fullText.charAt(index);
+      index++;
+      setTimeout(scrollName, 200); // scroll speed
+    }
+  }
+
+  window.onload = () => {
+    scrollName();
+  }
+</script>
+
+  
+</body>
+</html>
