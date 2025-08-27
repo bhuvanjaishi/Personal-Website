@@ -31,7 +31,7 @@
     }
 
     #logo {
-      font-size: 26px;
+      font-size: 30px;
       font-weight: bold;
       color: white;
     }
@@ -781,4 +781,5 @@ form#contactForm textarea::placeholder {
   color: #888;
  
 }
+
 
