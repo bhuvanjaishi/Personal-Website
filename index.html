@@ -136,113 +136,80 @@
 
   
   <script>
+  
   const highlightSpan = document.getElementById('highlight');
   const fullText = "BhuOne Joshi";
   let index = 0;
 
-  // Clear existing text
+
   highlightSpan.textContent = '';
 
   function scrollName() {
     if (index < fullText.length) {
       highlightSpan.textContent += fullText.charAt(index);
       index++;
-      setTimeout(scrollName, 200); // scroll speed
+      setTimeout(scrollName, 200); // typing speed (200ms)
     }
   }
 
+  // Run animation on page load
   window.onload = () => {
     scrollName();
-  }
+  };
 
-
-    // Scroll letter-by-letter animation for #highlight
-const highlightSpan = document.getElementById('highlight');
-const fullText = "BhuOne Joshi";
-let index = 0;
-
-highlightSpan.textContent = '';
-
-function scrollName() {
-  if (index < fullText.length) {
-    highlightSpan.textContent += fullText.charAt(index);
-    index++;
-    setTimeout(scrollName, 200);
-  }
-}
-
-// Run animation on page load
-window.onload = () => {
-  scrollName();
-};
-
-// Smooth scroll for navbar links with href starting with #
-document.querySelectorAll('#navbar nav ul li a').forEach(link => {
-  link.addEventListener('click', e => {
-    const href = link.getAttribute('href');
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
-    }
+  // Smooth scroll for navbar links with href starting with #
+  document.querySelectorAll('#navbar nav ul li a').forEach(link => {
+    link.addEventListener('click', e => {
+      const href = link.getAttribute('href');
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
-});
 
-// Navbar active link toggle on click
-const navLinks = document.querySelectorAll('#navbar nav ul li a');
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
+  // Navbar active link toggle
+  const navLinks = document.querySelectorAll('#navbar nav ul li a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
   });
-});
 
-// Home buttons hover toggle via JS (optional, CSS hover recommended)
-const primaryBtn = document.getElementById('primary-btn');
-const secondaryBtn = document.getElementById('secondary-btn');
+  // Back to Top Button
+  const backToTop = document.createElement('button');
+  backToTop.textContent = "↑ Top";
+  backToTop.id = "backToTop";
+  Object.assign(backToTop.style, {
+    position: 'fixed',
+    bottom: '30px',
+    right: '30px',
+    padding: '10px 15px',
+    fontSize: '18px',
+    display: 'none',
+    cursor: 'pointer',
+    border: 'none',
+    borderRadius: '5px',
+    backgroundColor: '#333',
+    color: '#fff',
+    zIndex: '1000',
+  });
+  document.body.appendChild(backToTop);
 
-primaryBtn.addEventListener('mouseenter', () => primaryBtn.classList.add('hover'));
-primaryBtn.addEventListener('mouseleave', () => primaryBtn.classList.remove('hover'));
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
-secondaryBtn.addEventListener('mouseenter', () => secondaryBtn.classList.add('hover'));
-secondaryBtn.addEventListener('mouseleave', () => secondaryBtn.classList.remove('hover'));
-
-// Back to Top Button Creation & Behavior
-const backToTop = document.createElement('button');
-backToTop.textContent = "↑ Top";
-backToTop.id = "backToTop";
-Object.assign(backToTop.style, {
-  position: 'fixed',
-  bottom: '30px',
-  right: '30px',
-  padding: '10px 15px',
-  fontSize: '18px',
-  display: 'none',
-  cursor: 'pointer',
-  border: 'none',
-  borderRadius: '5px',
-  backgroundColor: '#333',
-  color: '#fff',
-  zIndex: '1000',
-});
-document.body.appendChild(backToTop);
-
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTop.style.display = 'block';
-  } else {
-    backToTop.style.display = 'none';
-  }
-});
-
+  window.addEventListener('scroll', () => {
+    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
 </script>
 
   
 </body>
 </html>
+
 
 
 
