@@ -7,12 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <!-- Navbar -->
   <div id="navbar">
     <div id="navdiv">
       <div id="logo">BhuOne Joshi</div>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    
       <nav>
-        <ul>
+        <ul id="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -23,6 +31,7 @@
       </nav>
     </div>
   </div>
+
 
   <div id="skill-header">
   <h1>My Skills</h1>
@@ -119,34 +128,8 @@
       &copy; 2025 BhuOne Joshi. All rights reserved.
     </div>
   </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const skillLevels = document.querySelectorAll(".skill-level");
 
-    // Animate the skill bars width from 0 to their current width smoothly
-    skillLevels.forEach(skill => {
-      const fullWidth = skill.style.width;
-      skill.style.width = "0";
-      skill.style.transition = "width 1.5s ease-in-out";
-
-      // Trigger the animation after a short delay
-      setTimeout(() => {
-        skill.style.width = fullWidth;
-      }, 100);
-    });
-
-    // Optional: Highlight skill name on hover
-    const skillItems = document.querySelectorAll(".skill-item");
-    skillItems.forEach(item => {
-      item.addEventListener("mouseenter", () => {
-        item.querySelector(".skill-name").style.color = "#f39c12";
-      });
-      item.addEventListener("mouseleave", () => {
-        item.querySelector(".skill-name").style.color = "";
-      });
-    });
-  });
-</script>
+ <script src="script.js"></script>
 
 </body>
 </html>
