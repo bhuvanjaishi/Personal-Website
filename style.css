@@ -341,78 +341,208 @@ nav ul li a:hover {
   background-color: #218838;
 }
 
+
+
+
 /* ==============================
-   About Page
-   ============================== */
+   About Page Styles
+============================== */
+
+
+/* About Header */
 #about-header {
   text-align: center;
-  background-color: #343a40;
-  color: #fff;
-  padding: 40px 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  padding: 100px 20px 60px;
+  background: linear-gradient(120deg, #c1e1ff, #ffd1d1);
 }
 
 #about-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
 #about-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
 }
 
+/* About Section */
 #about-section {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
 }
 
 #about-section h2 {
-  color: #007bff;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
+  font-size: 36px;
+  color: #007BFF;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 #about-section p {
-  margin-bottom: 15px;
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* Skills Section */
+#skill {
+  max-width: 1200px;
+  margin: 80px auto 100px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#skill h2 {
+  font-size: 36px;
+  margin-bottom: 45px;
+  color: #FF5722;
+  font-weight: 700;
+}
+
+#skills-list-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#skills-list-1 div {
+  background: #007BFF;
+  color: #fff;
+  padding: 18px 28px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#skills-list-1 div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
 
 /* ==============================
-   Skills Page
-   ============================== */
-#skills {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   Responsive
+============================== */
+@media screen and (max-width: 1024px) {
+  #about-header h1 { font-size: 50px; }
+  #about-header p { font-size: 22px; }
+  #about-section h2, #skill h2 { font-size: 32px; }
+  #about-section p { font-size: 17px; }
+  #skills-list-1 div { font-size: 16px; padding: 14px 24px; }
 }
 
-#skills h2 {
-  color: #28a745;
+@media screen and (max-width: 768px) {
+  #about-header h1 { font-size: 42px; }
+  #about-header p { font-size: 20px; }
+  #about-section h2, #skill h2 { font-size: 28px; }
+  #about-section p { font-size: 16px; }
+  #skills-list-1 { flex-direction: column; }
+  #skills-list-1 div { width: 80%; margin: 0 auto; }
+}
+
+@media screen and (max-width: 480px) {
+  #about-header h1 { font-size: 34px; }
+  #about-header p { font-size: 16px; }
+  #about-section h2, #skill h2 { font-size: 24px; }
+  #skills-list-1 div { padding: 12px 20px; font-size: 15px; }
+}
+
+
+
+
+
+/* ==============================
+   Skills Section
+============================== */
+#skill-header {
+  text-align: center;
+  margin: 60px 20px 40px;
+}
+
+#skill-header h1 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+#skill-header p {
+  font-size: 18px;
+  color: #555;
+}
+
+#skills-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px 60px;
+}
+
+#skills-section h2 {
+  font-size: 28px;
+  color: #007BFF;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.skill-item {
   margin-bottom: 20px;
-  font-size: 1.8rem;
 }
 
-#skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-#skill {
-  background-color: #e9ecef;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 0.95rem;
+.skill-name {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
   color: #333;
-  border: 1px solid #ccc;
 }
+
+.skill-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* Default skill-level */
+.skill-level {
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  text-align: right;
+  padding-right: 8px;
+  color: white;
+  font-weight: 600;
+  line-height: 20px;
+  transition: width 2s ease-in-out;
+}
+
+/* Colors and width per skill */
+.skill-item.html .skill-level { background-color: #e44d26; width: 90%; }
+.skill-item.css .skill-level { background-color: #264de4; width: 85%; }
+.skill-item.js .skill-level { background-color: #f0db4f; width: 75%; color:#000; }
+.skill-item.react .skill-level { background-color: #00758f; width: 80%; }
+.skill-item.node .skill-level { background-color: #040404; width: 70%; }
+.skill-item.mongodb .skill-level { background-color: #03d17b; width: 60%; }
+.skill-item.php .skill-level { background-color: #8892be; width: 70%; }
+.skill-item.mysql .skill-level { background-color: #00758f; width: 65%; }
+.skill-item.git .skill-level { background-color: #f1502f; width: 80%; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  #skill-header h1 { font-size: 28px; }
+  #skill-header p { font-size: 16px; }
+  #skills-section h2 { font-size: 24px; }
+  .skill-name { font-size: 16px; }
+  .skill-bar { height: 16px; }
+  .skill-level { line-height: 16px; font-size: 14px; }
+}
+
 
 /* ==============================
    Portfolio Page
