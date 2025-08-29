@@ -37,35 +37,6 @@
 }
 
 
-
-#menu-btn {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-  #menu-btn {
-    display: block;
-  }
-
-  #nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  #nav-links.show {
-    display: flex;
-  }
-}
-
-
 #logo {
   font-size: 30px;
   font-weight: bold;
@@ -801,4 +772,5 @@ form#contactForm textarea::placeholder {
     font-size: 16px;
   }
 }
+
 
