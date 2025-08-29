@@ -8,6 +8,31 @@
 </head>
 <body>
 
+<!-- Navbar -->
+  <div id="navbar">
+    <div id="navdiv">
+      <div id="logo">BhuOne Joshi</div>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
   <div id="contact-page">
 <form id="contactForm">
   <input type="text" name="name" placeholder="Please enter your full name" required />
@@ -19,30 +44,45 @@
   <button type="submit">Send Message</button>
 </form>
 </div>
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // Stop default form action
 
-    const form = e.target;
-    const formData = new FormData(form);
 
-    fetch("https://formsubmit.co/bhuonejoshi123@gmail.com", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        alert("Contact form submitted successfully ✅");
-        window.location.href = "index.html"; // Redirect after OK
-      } else {
-        alert("Form submission failed. Please try again.");
-      }
-    })
-    .catch(error => {
-      alert("Something went wrong. Try again.");
-    });
-  });
-</script>
+  <!-- Footer -->
+  <footer id="footer">
+    <div id="footer-container">
+      <div id="footer-about">
+        <h3>Bhuone Joshi</h3>
+        <p>Web Developer | Programmer | Frontend & Backend Developer | Tech Enthusiast</p>
+        <p>Creating elegant and responsive websites to help you shine online.</p>
+      </div>
+
+      <div id="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div id="footer-contact">
+        <h4>Contact Info</h4>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhuonejoshi123@gmail.com" target="_blank">bhuonejoshi123@gmail.com</a></p>
+        <p>Phone: +977 9860132003</p>
+        <p>Location: Kathmandu, Nepal</p>
+      </div>
+      
+    </div>
+
+    <div id="footer-bottom">
+      &copy; 2025 BhuOne Joshi. All rights reserved.
+    </div>
+  </footer>
+
+
+ <script src="script.js"></script>
 
 </body>
 </html>
