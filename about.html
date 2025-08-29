@@ -7,13 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
+<!-- Navbar -->
   <div id="navbar">
     <div id="navdiv">
       <div id="logo">BhuOne Joshi</div>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    
       <nav>
-        <ul>
+        <ul id="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -95,69 +101,9 @@
   </footer>
 
 
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // 1. Typed Text Effect for about-header h1
-    const header = document.querySelector("#about-header h1");
-    const fullText = header.textContent;
-    header.textContent = "";
-    let index = 0;
-    function typeWriter() {
-      if(index < fullText.length) {
-        header.textContent += fullText.charAt(index);
-        index++;
-        setTimeout(typeWriter, 100);
-      }
-    }
-    typeWriter();
+  
+   <script src="script.js"></script>
 
-    // 2. Toggle extra info button for "Who I Am" section
-    const aboutSection = document.getElementById("about-section");
-    const paragraphs = aboutSection.querySelectorAll("p");
-    // Hide the last paragraph initially
-    paragraphs[paragraphs.length - 1].style.display = "none";
-
-    // Create toggle button
-    const toggleBtn = document.createElement("button");
-    toggleBtn.textContent = "Show More";
-    toggleBtn.style.margin = "15px 0";
-    toggleBtn.style.padding = "8px 12px";
-    toggleBtn.style.cursor = "pointer";
-    aboutSection.appendChild(toggleBtn);
-
-    toggleBtn.addEventListener("click", () => {
-      const lastPara = paragraphs[paragraphs.length - 1];
-      if(lastPara.style.display === "none") {
-        lastPara.style.display = "block";
-        toggleBtn.textContent = "Show Less";
-      } else {
-        lastPara.style.display = "none";
-        toggleBtn.textContent = "Show More";
-      }
-    });
-
-    // 3. Navbar active link on scroll
-    window.addEventListener("scroll", () => {
-      const sections = ["about-header", "about-section", "skills", "footer"];
-      const navLinks = document.querySelectorAll("#navbar nav ul li a");
-
-      let currentSection = "";
-      sections.forEach(id => {
-        const section = document.getElementById(id);
-        if(section) {
-          const top = section.getBoundingClientRect().top;
-          if(top <= 100) currentSection = id;
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if(link.getAttribute("href").includes(currentSection)) {
-          link.classList.add("active");
-        }
-      });
-    });
-  });
 </script>
 
 </body>
