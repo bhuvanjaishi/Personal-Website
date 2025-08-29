@@ -137,7 +137,13 @@
 
   
   <script>
-  
+  const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
   const highlightSpan = document.getElementById('highlight');
   const fullText = "BhuOne Joshi";
   let index = 0;
@@ -210,6 +216,7 @@
   
 </body>
 </html>
+
 
 
 
