@@ -15,7 +15,7 @@
     /* Navbar */
     #navbar {
       background-color: #007BFF;
-      padding: 20px 0;
+      padding: 10px 0;
       position: sticky;
       top: 0;
       z-index: 999;
@@ -783,5 +783,6 @@ form#contactForm textarea::placeholder {
   color: #888;
  
 }
+
 
 
