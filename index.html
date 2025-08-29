@@ -13,9 +13,15 @@
   <div id="navbar">
     <div id="navdiv">
       <div id="logo">BhuOne Joshi</div>
+      
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     
       <nav>
-        <ul>
+        <ul id="nav-menu">
           <li><a href="#">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -28,76 +34,77 @@
   </div>
 
   <!-- Home Section -->
-   <div id="body">
-  <section id="home">
-    <div id="home-content">
-      <div id="text-content">
-         <h1>Hello, I'm <span id="highlight">BhuOne Joshi</span></h1>
-        <h2>Web Developer | Programmer | Frontend & Backend Developer | Tech Enthusiast!</h2>
-        <p>
-          Welcome to my personal space on the internet. I’m passionate about crafting clean and responsive websites
-          using modern technologies. I love solving problems with code and turning creative ideas into digital realities.
-          With a strong foundation in HTML, CSS, JavaScript, React and backend tools like NodeJS PHP and MySQL,MongoDB, I strive to deliver
-          elegant and effective web solutions.
-        </p>
-        <p>
-          Whether you’re a business looking for a digital presence, a startup in need of a developer, or a curious
-          visitor wanting to learn more — you're in the right place.
-        </p>
+  <div id="body">
+    <section id="home">
+      <div id="home-content">
+        <div id="text-content">
+          <!-- <h1>Hello, I'm <span id="highlight">BhuOne Joshi</span></h1> -->
+          <!-- <h1>Hello, I'm <span id="highlight">BhuOne Joshi</span></h1> -->
+          <h1 id="indexheading">Hello, I'm <span id="highlight"></span></h1>
+          <h2>Web Developer | Programmer | Frontend & Backend Developer | Tech Enthusiast!</h2>
+          <p>
+            Welcome to my personal space on the internet. I'm passionate about crafting clean and responsive websites
+            using modern technologies. I love solving problems with code and turning creative ideas into digital realities.
+            With a strong foundation in HTML, CSS, JavaScript, React and backend tools like NodeJS PHP and MySQL,MongoDB, I strive to deliver
+            elegant and effective web solutions.
+          </p>
+          <p>
+            Whether you're a business looking for a digital presence, a startup in need of a developer, or a curious
+            visitor wanting to learn more — you're in the right place.
+          </p>
 
-        <div id="home-buttons">
-          <a href="portfolio.html" id="primary-btn">View Portfolio</a>
-          <a href="contact.html" id="secondary-btn">Contact Me</a>
+          <div id="home-buttons">
+            <a href="portfolio.html" id="primary-btn">View Portfolio</a>
+            <a href="contact.html" id="secondary-btn">Contact Me</a>
+          </div>
+
+          <div id="social-links">
+            <a href="https://www.facebook.com/cristiano.georgina.2025" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/cristiano_bhuone_7?igsh=YnBkcTdva3FmbWc4" target="_blank">Instagram</a>
+            <a href="https://x.com/BhuvanJaishi/status/1638425250089308161?t=e6yaSwVwRo0xvhJVRfQOjg&s=19">Twitter</a>
+          </div>
         </div>
 
-        <div id="social-links">
-          <a href="https://www.facebook.com/cristiano.georgina.2025" target="_blank">Facebook</a>
-          <a href="https://www.instagram.com/cristiano_bhuone_7?igsh=YnBkcTdva3FmbWc4" target="_blank">Instagram</a>
-          <a href="https://x.com/BhuvanJaishi/status/1638425250089308161?t=e6yaSwVwRo0xvhJVRfQOjg&s=19">Twitter</a>
+        <div id="image-content">
+          <img src="img/img for home page .jpg" alt="BhuOne Joshi" />
+        </div>
+
+        <div id="journey-heading">
+          <h2>My Journey So Far</h2>
+        </div>
+
+        <div id="journey-paragraph1">
+          <p>
+            From humble beginnings learning HTML in 2020, I have dedicated myself to mastering full stack development.
+            My journey involved deep dives into JavaScript frameworks, backend architecture with PHP, and database management using MySQL.
+            I constantly challenge myself by taking on real-world projects and collaborating with like-minded developers.
+          </p>
+        </div>
+
+        <div id="journey-paragraph2">
+          <p>
+            I believe in continuous learning and adaptability. Technology evolves rapidly, and so do I — staying up to date
+            with the latest trends and best practices to deliver the best results for clients and users.
+          </p>
+        </div>
+
+        <div id="skills-heading">
+          <h3>Skills & Tools I Use</h3>
+        </div>
+
+        <div id="skills-list">
+          <ul>
+            <li>HTML5, CSS3, JavaScript (ES6+)</li>
+            <li>React, Vue.js, or Angular (Frontend Frameworks)</li>
+            <li>PHP, Node.js (Backend Development)</li>
+            <li>MySQL, MongoDB (Databases)</li>
+            <li>Git & GitHub (Version Control)</li>
+            <li>Responsive Design & Accessibility</li>
+          </ul>
         </div>
       </div>
-
-      <div id="image-content">
-        <img src="img/img for home page .jpg" alt="BhuOne Joshi" />
-      </div>
-
-      <div id="journey-heading">
-    <h2>My Journey So Far</h2>
-  </div>
-
-  <div id="journey-paragraph1">
-    <p>
-      From humble beginnings learning HTML in 2020, I have dedicated myself to mastering full stack development.
-      My journey involved deep dives into JavaScript frameworks, backend architecture with PHP, and database management using MySQL.
-      I constantly challenge myself by taking on real-world projects and collaborating with like-minded developers.
-    </p>
-  </div>
-
-  <div id="journey-paragraph2">
-    <p>
-      I believe in continuous learning and adaptability. Technology evolves rapidly, and so do I — staying up to date
-      with the latest trends and best practices to deliver the best results for clients and users.
-    </p>
-  </div>
-
-  <div id="skills-heading">
-    <h3>Skills & Tools I Use</h3>
-  </div>
-
-  <div id="skills-list">
-    <ul>
-      <li>HTML5, CSS3, JavaScript (ES6+)</li>
-      <li>React, Vue.js, or Angular (Frontend Frameworks)</li>
-      <li>PHP, Node.js (Backend Development)</li>
-      <li>MySQL, MongoDB (Databases)</li>
-      <li>Git & GitHub (Version Control)</li>
-      <li>Responsive Design & Accessibility</li>
-    </ul>
-     </div>
-    </div>
     </div>
   </section>
-
 
   <!-- Footer -->
   <footer id="footer">
@@ -126,7 +133,6 @@
         <p>Phone: +977 9860132003</p>
         <p>Location: Kathmandu, Nepal</p>
       </div>
-      
     </div>
 
     <div id="footer-bottom">
@@ -135,87 +141,7 @@
   </footer>
 
 
-  
-  <script>
-
-
-  const highlightSpan = document.getElementById('highlight');
-  const fullText = "BhuOne Joshi";
-  let index = 0;
-
-
-  highlightSpan.textContent = '';
-
-  function scrollName() {
-    if (index < fullText.length) {
-      highlightSpan.textContent += fullText.charAt(index);
-      index++;
-      setTimeout(scrollName, 200); // typing speed (200ms)
-    }
-  }
-
-  // Run animation on page load
-  window.onload = () => {
-    scrollName();
-  };
-
-  // Smooth scroll for navbar links with href starting with #
-  document.querySelectorAll('#navbar nav ul li a').forEach(link => {
-    link.addEventListener('click', e => {
-      const href = link.getAttribute('href');
-      if (href.startsWith('#')) {
-        e.preventDefault();
-        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Navbar active link toggle
-  const navLinks = document.querySelectorAll('#navbar nav ul li a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-    });
-  });
-
-  // Back to Top Button
-  const backToTop = document.createElement('button');
-  backToTop.textContent = "↑ Top";
-  backToTop.id = "backToTop";
-  Object.assign(backToTop.style, {
-    position: 'fixed',
-    bottom: '30px',
-    right: '30px',
-    padding: '10px 15px',
-    fontSize: '18px',
-    display: 'none',
-    cursor: 'pointer',
-    border: 'none',
-    borderRadius: '5px',
-    backgroundColor: '#333',
-    color: '#fff',
-    zIndex: '1000',
-  });
-  document.body.appendChild(backToTop);
-
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  window.addEventListener('scroll', () => {
-    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-  });
-</script>
-
-  
+ <script src="script.js"></script>
+ 
 </body>
 </html>
-
-
-
-
-
-
-
-
