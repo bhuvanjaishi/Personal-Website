@@ -1,117 +1,114 @@
 
- /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.7;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.7;
+}
 
-    #navbar {
-      background-color: #007BFF;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
+#navbar {
+  background-color: #007BFF;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 999;
+}
 
-    #navdiv {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-    }
+#navdiv {
+  width: 100%; /* full width */
+  max-width: 1200px; /* optional */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+/* Logo */
+#logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
 
-    #indexheading{
-       font-family: Arial, sans-serif;
-    font-size: 2em;
-    }
+/* Desktop Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
 
-     #highlight {
-    color: #eb050d;
-    font-weight: bold;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  #navdiv {
+    width: 100%;
+    justify-content: space-between; /* Toggle left, Logo right */
   }
 
-    #logo {
-      font-size: 30px;
-      font-weight: bold;
-      color: white;
-    }
+  .menu-toggle {
+    display: flex;
+     order: 2;
+  }
 
-    /* Desktop Navigation */
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      transition: 0.3s;
-    }
+  nav ul.active {
+    display: flex;
+  }
 
-    nav ul li a:hover {
-      color: #ffd700;
-    }
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
 
-    /* Mobile Navigation */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
+  #logo {
+   
+    font-size: 24px;
+  }
+} */
 
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background: white;
-      margin-bottom: 5px;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    /* Responsive Styles */
-    @media screen and (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-      }
-      
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #007BFF;
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      }
-      
-      nav ul.active {
-        display: flex;
-      }
-      
-      nav ul li {
-        margin: 10px 0;
-        text-align: center;
-      }
-      
-      #logo {
-        font-size: 24px;
-      }
-    }
 
     /* Rest of your CSS remains the same */
     #home {
@@ -817,7 +814,7 @@ form#contactForm textarea::placeholder {
 @media (max-width: 768px) {
   /* Navbar */
   #navdiv {
-    flex-direction: column;
+    flex-direction: row;
   }
   nav ul {
     flex-direction: column;
