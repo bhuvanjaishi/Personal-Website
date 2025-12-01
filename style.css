@@ -199,6 +199,7 @@ nav ul li a:hover {
     }
 
     #social-links a {
+      margin-right: 15px;
       color: #444;
       font-weight: 500;
       transition: 0.3s;
@@ -934,8 +935,5 @@ form#contactForm textarea::placeholder {
     font-size: 16px;
   }
 }
-
-
-
 
 
