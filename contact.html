@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ne">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Form Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <!-- Navbar -->
   <div id="navbar">
     <div id="navdiv">
@@ -33,15 +32,17 @@
   </div>
 
 
-  <div id="contact-page">
-<form id="contactForm">
-  <input type="text" name="name" placeholder="Please enter your full name" required />
-  <input type="email" name="email" placeholder="Please enter your Email" required />
-  <input type="text" name="contact" placeholder="Please enter your contact" required />
-  <input type="text" name="address" placeholder="Please enter your address" required />
+  <div class="contact-form">
+<form id="contactForm" action="https://formsubmit.co/bhuvanjaishi83@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="text" name="contact" placeholder="Contact" required>
   <textarea name="message" placeholder="Message" required></textarea>
-  <input type="hidden" name="_captcha" value="false" />
-  <button type="submit">Send Message</button>
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Contact Message">
+
+  <button type="submit">Send</button>
 </form>
 </div>
 
@@ -58,7 +59,7 @@
       <div id="footer-links">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="skills.html">Skills</a></li>
@@ -69,11 +70,10 @@
 
       <div id="footer-contact">
         <h4>Contact Info</h4>
-        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhuonejoshi123@gmail.com" target="_blank">bhuonejoshi123@gmail.com</a></p>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhuvanjaishi83@gmail.com" target="_blank">bhuvanjaishi83@gmail.com</a></p>
         <p>Phone: +977 9860132003</p>
         <p>Location: Kathmandu, Nepal</p>
       </div>
-      
     </div>
 
     <div id="footer-bottom">
@@ -81,8 +81,38 @@
     </div>
   </footer>
 
+<script>
+const form = document.getElementById("contactForm");
 
- <script src="script.js"></script>
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop default submit
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { "Accept": "application/json" }
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset();
+
+      // redirect after 1.5 seconds
+      setTimeout(() => {
+        window.location.href = "index.html";
+      },);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  })
+  .catch(() => {
+    alert("Network error. Please try again.");
+  });
+});
+</script>
 
 </body>
 </html>
+
+
+
