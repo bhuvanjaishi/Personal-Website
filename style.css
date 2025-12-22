@@ -735,206 +735,83 @@ section h2 {
   color: #444;
 }
 
-/* ==============================
-   Contact Page
-   ============================== */
-#contact-page {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url(img/bg\ img\ for\ contact\ form.avif);
-  background-size: cover;
-  margin: 0;
-  padding: 20px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
 
-form#contactForm {
-  background: white;
+/* =========================
+   Contact Form Styles
+========================= */
+.contact-form {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 50px auto;
   padding: 30px 25px;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  max-width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-form#contactForm input[type="text"],
-form#contactForm input[type="email"],
-form#contactForm textarea {
   padding: 12px 15px;
-  border: 1.8px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
 }
 
-form#contactForm input[type="text"]:focus,
-form#contactForm input[type="email"]:focus,
-form#contactForm textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
-  border-color: #4a90e2;
-  box-shadow: 0 0 5px rgba(74,144,226,0.5);
+  border: 2px solid #ff6b6b;
 }
 
-form#contactForm textarea {
-  min-height: 100px;
-}
-
-form#contactForm button[type="submit"] {
-  background-color: #4a90e2;
-  color: white;
+.contact-form button {
+  width: 100%;
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 12px;
   border: none;
-  padding: 14px 0;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 6px;
+  border-radius: 5px;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-form#contactForm button[type="submit"]:hover {
-  background-color: #357abd;
+.contact-form button:hover {
+  background-color: #e55a5a;
 }
 
-form#contactForm input::placeholder,
-form#contactForm textarea::placeholder {
-  color: #888;
+.contact-form .error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -5px;
 }
 
-/* ==============================
-   Media Queries for Responsiveness
-   ============================== */
+.contact-form .success {
+  color: green;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
 
-/* Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-  /* Navbar */
-  #navdiv {
-    flex-direction: row;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
+/* Input borders for valid/invalid */
+input.invalid, textarea.invalid {
+  border: 2px solid red;
+}
 
-  /* Home Section */
-  #home-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  #text-content {
-    text-align: center;
-  }
-  #text-content h1 {
-    font-size: 36px;
-  }
-  #text-content h2 {
-    font-size: 22px;
-  }
-  #primary-btn,
-  #secondary-btn {
-    display: block;
-    margin: 10px auto;
-  }
+input.valid, textarea.valid {
+  border: 2px solid green;
+}
 
-  /* Footer */
-  #footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-  #footer-about,
-  #footer-links,
-  #footer-contact {
-    flex: 1 1 100%;
-  }
-
-  /* Skills */
-  #skills-list {
-    flex-direction: column;
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contact-form {
+    margin: 30px 15px;
+    padding: 25px 15px;
   }
 }
 
-/* Mobile Devices (max-width: 480px) */
-@media (max-width: 480px) {
-  /* Navbar */
-  #logo {
-    font-size: 24px;
-  }
-  nav ul li a {
-    font-size: 16px;
-  }
-
-  /* Home Section */
-  #text-content h1 {
-    font-size: 28px;
-  }
-  #text-content h2 {
-    font-size: 18px;
-  }
-  #image-content img {
-    max-width: 250px;
-  }
-
-  /* Footer */
-  #footer {
-    padding: 30px 10px;
-    font-size: 14px;
-  }
-  #footer-bottom {
-    font-size: 14px;
-  }
-  #footer-about h3,
-  #footer-links h4,
-  #footer-contact h4 {
-    font-size: 18px;
-  }
-
-  /* Portfolio */
-  #projects-grid {
-    gap: 20px;
-  }
-  .project-title {
-    font-size: 1.1rem;
-  }
-  .project-description {
-    font-size: 0.9rem;
-  }
-
-  /* Skills */
-  .skill-name {
-    font-size: 0.95rem;
-  }
-
-  /* Resume */
-  #resume-header h1 {
-    font-size: 1.8em;
-  }
-  section h2 {
-    font-size: 1.2em;
-  }
-  #item h3 {
-    font-size: 1em;
-  }
-  #item p,
-  #item span {
-    font-size: 0.9em;
-  }
-
-  /* Contact Form */
-  form#contactForm {
-    padding: 20px 15px;
-  }
-  form#contactForm input,
-  form#contactForm textarea,
-  form#contactForm button {
-    font-size: 16px;
-  }
-}
 
 
 
