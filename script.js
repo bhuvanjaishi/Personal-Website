@@ -127,28 +127,6 @@
 
 
 
-  
-// Contact page script
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // Stop default form action
 
-    const form = e.target;
-    const formData = new FormData(form);
 
-    fetch("https://formsubmit.co/bhuonejoshi123@gmail.com", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        alert("Contact form submitted successfully ✅");
-        window.location.href = "index.html"; // Redirect after OK
-      } else {
-        alert("Form submission failed. Please try again.");
-      }
-    })
-    .catch(error => {
-      alert("Something went wrong. Try again.");
-    });
-  });
 
