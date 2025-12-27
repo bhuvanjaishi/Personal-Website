@@ -11,7 +11,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  line-height: 1.7;
+  line-height: 1.8;
   overflow-x: hidden;
 }
 
@@ -21,7 +21,7 @@ body {
 #navbar {
   background-color: #007BFF;
   padding: 10px 20px;
-  position: relative; /* navbar scrolls with page */
+  position: relative;
   z-index: 999;
 }
 
@@ -60,7 +60,7 @@ nav ul li a:hover {
 
 /* Hamburger Menu */
 .menu-toggle {
-  display: none; /* only visible on mobile */
+  display: none;
   flex-direction: column;
   cursor: pointer;
 }
@@ -82,7 +82,7 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* adjust for navbar height */
+    top: 60px;
     right: 0;
     width: 100%;
     background-color: #232323;
@@ -108,7 +108,7 @@ nav ul li a:hover {
 ======================== */
 #home {
   background: linear-gradient(to right, #e3f2fd, #fce4ec);
-  padding: 20px;
+  padding: 20px 0;
 }
 
 #home-content {
@@ -118,6 +118,7 @@ nav ul li a:hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 40px;
+  padding: 0 15px;
 }
 
 /* TEXT AREA */
@@ -128,7 +129,7 @@ nav ul li a:hover {
 
 #text-content h1 {
   font-size: 42px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 #text-content h2 {
@@ -142,6 +143,7 @@ nav ul li a:hover {
   line-height: 1.8;
   margin-bottom: 20px;
   text-align: justify;
+  word-wrap: break-word;
 }
 
 #highlight {
@@ -177,6 +179,7 @@ nav ul li a:hover {
 #secondary-btn:hover {
   opacity: 0.85;
 }
+
 /* SOCIAL LINKS */
 #social-links {
   margin-top: 25px;
@@ -191,51 +194,19 @@ nav ul li a:hover {
   padding: 5px 10px;
   border-radius: 5px;
   transition: 0.3s;
-  color: white; /* default text color if background is colored */
+  color: white;
 }
 
 /* Individual brand colors */
-#social-links a[href*="facebook.com"] {
-  background-color: #1877F2; /* Facebook Blue */
-  color: white;
-}
+#social-links a[href*="facebook.com"] { background-color: #1877F2; }
+#social-links a[href*="instagram.com"] { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+#social-links a[href*="x.com"], #social-links a[href*="twitter.com"] { background-color: #1DA1F2; }
+#social-links a[href*="linkedin.com"] { background-color: #0077B5; }
+#social-links a[href*="github.com"] { background-color: #333; }
+#social-links a[href*="youtube.com"] { background-color: #FF0000; }
+#social-links a[href*="tiktok.com"] { background: linear-gradient(to right, #69C9D0, #EE1D52); }
 
-#social-links a[href*="instagram.com"] {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  color: white;
-}
-
-#social-links a[href*="x.com"], /* Twitter/X */
-#social-links a[href*="twitter.com"] {
-  background-color: #1DA1F2; /* Twitter Blue */
-  color: white;
-}
-
-#social-links a[href*="linkedin.com"] {
-  background-color: #0077B5; /* LinkedIn Blue */
-  color: white;
-}
-
-#social-links a[href*="github.com"] {
-  background-color: #333; /* GitHub Black */
-  color: white;
-}
-
-#social-links a[href*="youtube.com"] {
-  background-color: #FF0000; /* YouTube Red */
-  color: white;
-}
-
-#social-links a[href*="tiktok.com"] {
-  background: linear-gradient(to right, #69C9D0, #EE1D52); /* TikTok colors */
-  color: white;
-}
-
-/* Hover effect (slightly lighten background) */
-#social-links a:hover {
-  opacity: 0.8;
-}
-
+#social-links a:hover { opacity: 0.8; }
 
 /* IMAGE */
 #image-content {
@@ -246,8 +217,7 @@ nav ul li a:hover {
 #image-content img {
   width: 100%;
   max-width: 500px;
-  border-radius: 0%;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* ========================
@@ -263,10 +233,11 @@ nav ul li a:hover {
 #journey-paragraph2 {
   max-width: 900px;
   margin: 20px auto;
-  text-align: justify;
   font-size: 17px;
   line-height: 1.8;
-  padding: 0 15px; /* added padding for mobile */
+  text-align: justify;
+  padding: 0 15px;
+  word-break: break-word;
 }
 
 /* ========================
@@ -355,7 +326,7 @@ nav ul li a:hover {
 #footer-bottom {
   margin-top: 40px;
   padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   text-align: center;
   font-size: 14px;
   color: #9ca3af;
