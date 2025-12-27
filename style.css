@@ -21,8 +21,7 @@ body {
 #navbar {
   background-color: #007BFF;
   padding: 10px 20px;
-  position: sticky; /* changed to sticky so it stays on top */
-  top: 0;
+  position: relative; /* navbar scrolls with page */
   z-index: 999;
 }
 
@@ -34,12 +33,14 @@ body {
   align-items: center;
 }
 
+/* Logo */
 #logo {
   font-size: 28px;
   font-weight: bold;
   color: white;
 }
 
+/* Navigation Menu */
 nav ul {
   list-style: none;
   display: flex;
@@ -51,18 +52,15 @@ nav ul li a {
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
-  padding-right: 10px;
 }
 
 nav ul li a:hover {
   color: #ffd700;
 }
 
-/* ========================
-   Mobile Menu
-======================== */
+/* Hamburger Menu */
 .menu-toggle {
-  display: none;
+  display: none; /* only visible on mobile */
   flex-direction: column;
   cursor: pointer;
 }
@@ -76,14 +74,16 @@ nav ul li a:hover {
   transition: all 0.3s ease;
 }
 
-/* Mobile Responsive */
+/* ========================
+   Mobile Responsive
+======================== */
 @media screen and (max-width: 768px) {
   nav ul {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 77px;
-    left: 0;
+    top: 60px; /* adjust for navbar height */
+    right: 0;
     width: 100%;
     background-color: #232323;
     padding: 20px 0;
@@ -103,11 +103,12 @@ nav ul li a:hover {
   }
 }
 
-/* ================= HOME SECTION ================= */
-
+/* ========================
+   Home Section
+======================== */
 #home {
   background: linear-gradient(to right, #e3f2fd, #fce4ec);
-  padding: 80px 20px;
+  padding:  20px;
 }
 
 #home-content {
@@ -196,12 +197,14 @@ nav ul li a:hover {
 
 #image-content img {
   width: 100%;
-  max-width: 350px;
-  border-radius: 50%;
+  max-width: 500px;
+  /* border-radius: 0%; */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* JOURNEY SECTION */
+/* ========================
+   Journey Section
+======================== */
 #journey-heading h2 {
   margin-top: 60px;
   font-size: 28px;
@@ -217,7 +220,9 @@ nav ul li a:hover {
   line-height: 1.8;
 }
 
-/* SKILLS */
+/* ========================
+   Skills Section
+======================== */
 #skills-heading h3 {
   text-align: center;
   font-size: 26px;
@@ -236,13 +241,15 @@ nav ul li a:hover {
 
 #skills-list li {
   margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.8;
 }
 
-/* ================= FOOTER ================= */
-/* ================= FOOTER STYLING ================= */
-
+/* ========================
+   Footer
+======================== */
 #footer {
-  background: #0f172a; /* Dark professional shade */
+  background: #0f172a; 
   color: #e5e7eb;
   padding: 60px 20px 30px;
   font-family: 'Segoe UI', sans-serif;
@@ -256,7 +263,6 @@ nav ul li a:hover {
   gap: 40px;
 }
 
-/* FOOTER HEADINGS */
 #footer h3,
 #footer h4 {
   font-size: 20px;
@@ -265,7 +271,6 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
-/* PARAGRAPH TEXT */
 #footer p {
   font-size: 15px;
   line-height: 1.7;
@@ -273,7 +278,6 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-/* LINKS */
 #footer a {
   color: #cbd5e1;
   text-decoration: none;
@@ -285,7 +289,6 @@ nav ul li a:hover {
   padding-left: 4px;
 }
 
-/* QUICK LINKS */
 #footer-links ul {
   list-style: none;
   padding: 0;
@@ -295,12 +298,10 @@ nav ul li a:hover {
   margin-bottom: 8px;
 }
 
-/* CONTACT SECTION */
 #footer-contact p {
   margin-bottom: 8px;
 }
 
-/* BOTTOM BAR */
 #footer-bottom {
   margin-top: 40px;
   padding-top: 15px;
@@ -310,9 +311,23 @@ nav ul li a:hover {
   color: #9ca3af;
 }
 
-/* ============ RESPONSIVE ============ */
-
+/* ========================
+   Responsive
+======================== */
 @media (max-width: 768px) {
+  #home-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #text-content {
+    text-align: center;
+  }
+
+  #image-content {
+    margin-top: 20px;
+  }
+
   #footer {
     text-align: center;
   }
@@ -325,6 +340,9 @@ nav ul li a:hover {
     padding-left: 0;
   }
 }
+
+
+
 
 
 /* About Header */
