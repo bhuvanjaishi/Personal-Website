@@ -58,6 +58,7 @@ nav ul li a:hover {
   display: none;
   flex-direction: column;
   cursor: pointer;
+
 }
 
 .menu-toggle span {
@@ -74,12 +75,15 @@ nav ul li a:hover {
   #navdiv {
     width: 100%;
     justify-content: space-between; /* Toggle left, Logo right */
+
   }
 
   .menu-toggle {
     display: flex;
      order: 2;
   }
+
+  
 
   nav ul {
     display: none;
@@ -95,6 +99,8 @@ nav ul li a:hover {
 
   nav ul.active {
     display: flex;
+             background-color: rgb(56, 55, 55);
+
   }
 
   nav ul li {
@@ -141,7 +147,12 @@ nav ul li a:hover {
       color: #111;
     }
 
-   
+    #text-content h2 {
+      font-size: 28px;
+      color: #007BFF;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
 
     #text-content p {
       margin-bottom: 24px;
@@ -730,18 +741,135 @@ section h2 {
   color: #444;
 }
 
+/* ========================
+   General Reset
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* =========================
-   Contact Form Styles
-========================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ========================
+   Navbar
+======================== */
+#navbar {
+  background-color: #007BFF;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 999;
+}
+
+#navdiv {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF;
+    padding: 20px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+/* ========================
+   Contact Form
+======================== */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 15px 20px;
+  background-image: url(img/bg\ img\ for\ contact\ form.avif);
+  background-size: cover;
+}
+
 .contact-form {
   background-color: #fff;
   max-width: 600px;
-  margin: 50px auto;
+  width: 100%;
   padding: 30px 25px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #007BFF;
 }
 
 .contact-form input,
@@ -752,13 +880,11 @@ section h2 {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border 0.3s ease;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border: 2px solid #ff6b6b;
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
 .contact-form button {
@@ -777,37 +903,57 @@ section h2 {
   background-color: #e55a5a;
 }
 
-.contact-form .error {
-  color: red;
-  font-size: 0.9rem;
-  margin-top: -5px;
+/* ========================
+   Footer
+======================== */
+#footer {
+  background: #222831;
+  color: #eeeeee;
+  padding: 50px 20px 30px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.contact-form .success {
-  color: green;
-  font-size: 1rem;
-  margin-top: 10px;
+#footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+#footer-about h3,
+#footer-links h4,
+#footer-contact h4 {
+  color: #00adb5;
+}
+
+#footer-about p,
+#footer-contact p {
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+#footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+#footer-links ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#footer-links ul li a:hover {
+  color: #00adb5;
+}
+
+#footer-bottom {
   text-align: center;
+  border-top: 1px solid #393e46;
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #f3efef;
 }
-
-/* Input borders for valid/invalid */
-input.invalid, textarea.invalid {
-  border: 2px solid red;
-}
-
-input.valid, textarea.valid {
-  border: 2px solid green;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .contact-form {
-    margin: 30px 15px;
-    padding: 25px 15px;
-  }
-}
-
-
-
-
-
