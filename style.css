@@ -141,12 +141,7 @@ nav ul li a:hover {
       color: #111;
     }
 
-    #text-content h2 {
-      font-size: 28px;
-      color: #007BFF;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
+   
 
     #text-content p {
       margin-bottom: 24px;
@@ -811,6 +806,7 @@ input.valid, textarea.valid {
     padding: 25px 15px;
   }
 }
+
 
 
 
