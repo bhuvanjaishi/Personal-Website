@@ -108,7 +108,7 @@ nav ul li a:hover {
 ======================== */
 #home {
   background: linear-gradient(to right, #e3f2fd, #fce4ec);
-  padding:  20px;
+  padding: 20px;
 }
 
 #home-content {
@@ -187,6 +187,11 @@ nav ul li a:hover {
   margin-right: 12px;
   color: #444;
   font-weight: 500;
+  text-decoration: none;
+}
+
+#social-links a:hover {
+  color: #007BFF;
 }
 
 /* IMAGE */
@@ -198,7 +203,7 @@ nav ul li a:hover {
 #image-content img {
   width: 100%;
   max-width: 500px;
-  /* border-radius: 0%; */
+  border-radius: 0%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -218,6 +223,7 @@ nav ul li a:hover {
   text-align: justify;
   font-size: 17px;
   line-height: 1.8;
+  padding: 0 15px; /* added padding for mobile */
 }
 
 /* ========================
@@ -232,6 +238,7 @@ nav ul li a:hover {
 #skills-list {
   max-width: 700px;
   margin: 20px auto;
+  padding: 0 15px;
 }
 
 #skills-list ul {
@@ -312,7 +319,7 @@ nav ul li a:hover {
 }
 
 /* ========================
-   Responsive
+   Responsive Adjustments
 ======================== */
 @media (max-width: 768px) {
   #home-content {
@@ -322,10 +329,19 @@ nav ul li a:hover {
 
   #text-content {
     text-align: center;
+    padding: 0 15px;
   }
 
   #image-content {
     margin-top: 20px;
+  }
+
+  #journey-paragraph1,
+  #journey-paragraph2,
+  #skills-list {
+    max-width: 100%;
+    padding: 0 15px;
+    text-align: justify;
   }
 
   #footer {
