@@ -177,22 +177,65 @@ nav ul li a:hover {
 #secondary-btn:hover {
   opacity: 0.85;
 }
-
 /* SOCIAL LINKS */
 #social-links {
   margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 #social-links a {
-  margin-right: 12px;
-  color: #444;
-  font-weight: 500;
   text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: white; /* default text color if background is colored */
 }
 
-#social-links a:hover {
-  color: #007BFF;
+/* Individual brand colors */
+#social-links a[href*="facebook.com"] {
+  background-color: #1877F2; /* Facebook Blue */
+  color: white;
 }
+
+#social-links a[href*="instagram.com"] {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: white;
+}
+
+#social-links a[href*="x.com"], /* Twitter/X */
+#social-links a[href*="twitter.com"] {
+  background-color: #1DA1F2; /* Twitter Blue */
+  color: white;
+}
+
+#social-links a[href*="linkedin.com"] {
+  background-color: #0077B5; /* LinkedIn Blue */
+  color: white;
+}
+
+#social-links a[href*="github.com"] {
+  background-color: #333; /* GitHub Black */
+  color: white;
+}
+
+#social-links a[href*="youtube.com"] {
+  background-color: #FF0000; /* YouTube Red */
+  color: white;
+}
+
+#social-links a[href*="tiktok.com"] {
+  background: linear-gradient(to right, #69C9D0, #EE1D52); /* TikTok colors */
+  color: white;
+}
+
+/* Hover effect (slightly lighten background) */
+#social-links a:hover {
+  opacity: 0.8;
+}
+
 
 /* IMAGE */
 #image-content {
