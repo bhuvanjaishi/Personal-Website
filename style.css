@@ -235,6 +235,8 @@ nav ul li a:hover {
       color: #444444;
       margin-bottom: 25px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-left: 10px;
+
     }
 
     #skills-heading h3 {
@@ -957,3 +959,4 @@ nav ul li a:hover {
   font-size: 16px;
   color: #f3efef;
 }
+
