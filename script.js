@@ -14,7 +14,7 @@
 
 
     // Index pahe BhuOne Joshi Name script
-  const name = "BhuOne Joshi";  
+  const name = "B.J";  
   const span = document.getElementById("highlight");
   let index = 0;
 
@@ -124,6 +124,7 @@
       });
     });
   });
+
 
 
 
