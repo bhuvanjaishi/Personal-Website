@@ -52,7 +52,7 @@ body {
 #logo-subtitle {
   font-size: 12px;
   font-weight: 500;
-  color: #e1f503;
+  color: yellow;
   padding-left: 5px;
 }
 
@@ -997,6 +997,7 @@ section h2 {
 .contact-form button:hover {
   background-color: #e55a5a;
 }
+
 
 
 
