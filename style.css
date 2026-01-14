@@ -37,24 +37,12 @@ body {
   align-items: center;
 }
 
-/* Logo Left */
-#logo-container {
-  text-align: left;
-  color: white;
-  font-weight: bold;
-}
 
 #logo {
   font-size: 22px;
   font-weight: 700;
 }
 
-#logo-subtitle {
-  font-size: 12px;
-  font-weight: 500;
-  color: yellow;
-  padding-left: 5px;
-}
 
 /* Navigation Menu */
 nav ul {
@@ -997,6 +985,7 @@ section h2 {
 .contact-form button:hover {
   background-color: #e55a5a;
 }
+
 
 
 
