@@ -294,94 +294,68 @@
       </div>
     </div>
     <div id="footer-bottom">
-  &copy; <span id="year"></span> BhuOne Joshi. All rights reserved.
-</div>
-
+      &copy; 2026 BhuOne Joshi. All rights reserved.
+    </div>
   </footer>
 
   <script>
+/* ===== MOBILE FULLSCREEN NAV (REAL WORLD) ===== */
 
-  document.getElementById("year").textContent = new Date().getFullYear();
+const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('#nav-menu');
 
-    // Mobile menu toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.getElementById('nav-menu');
-    
-    mobileMenu.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-    });
-    
-    // Close menu when clicking a link
-    const navLinks = document.querySelectorAll('#nav-menu a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileMenu.classList.remove('active');
-      });
-    });
-    
-    // Text animation for highlight
-    const highlight = document.getElementById('highlight');
-    const texts = [
-      "BhuOne Joshi",
-      "Full Stack Developer",
-      "Problem Solver",
-      "Web Creator",
-      "Tech Enthusiast"
-    ];
-    let currentIndex = 0;
-    
-    function changeText() {
-      highlight.style.opacity = 0;
-      setTimeout(() => {
-        highlight.textContent = texts[currentIndex];
-        highlight.style.opacity = 1;
-        currentIndex = (currentIndex + 1) % texts.length;
-      }, 500);
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+
+  document.body.style.overflow = isOpen ? "hidden" : "auto";
+});
+
+/* Close menu on link click */
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    menuBtn.classList.remove("active");
+    document.body.style.overflow = "auto";
+  });
+});
+
+/* ===== TEXT ROTATION ===== */
+
+const highlight = document.getElementById("highlight");
+const texts = [
+  "BhuOne Joshi",
+  "Full Stack Developer",
+  "Problem Solver",
+  "Web Creator",
+  "Tech Enthusiast"
+];
+
+let currentIndex = 0;
+
+setInterval(() => {
+  highlight.style.opacity = 0;
+  setTimeout(() => {
+    highlight.textContent = texts[currentIndex];
+    highlight.style.opacity = 1;
+    currentIndex = (currentIndex + 1) % texts.length;
+  }, 400);
+}, 3000);
+
+/* ===== SCROLL FADE ANIMATION ===== */
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-in");
     }
-    
-    // Start text rotation after initial display
-    setTimeout(() => {
-      setInterval(changeText, 3000);
-    }, 1000);
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if(targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-    
-    // Add scroll animation
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
-      });
-    }, observerOptions);
-    
-    // Observe all content sections
-    document.querySelectorAll('.services-grid, .content-section').forEach((section) => {
-      observer.observe(section);
-    });
-  </script>
+  });
+}, { threshold: 0.15 });
+
+document
+  .querySelectorAll(".services-grid, .content-section")
+  .forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
-
