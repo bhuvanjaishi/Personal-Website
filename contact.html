@@ -97,12 +97,14 @@
         <p>Location: Kathmandu, Nepal</p>
       </div>
     </div>
-    <div id="footer-bottom">
-      &copy; 2026 BhuOne Joshi. All rights reserved.
-    </div>
-  </footer>
-
+    
+   <div id="footer-bottom">
+  &copy; <span id="year"></span> BhuOne Joshi. All rights reserved.
+</div>
+  
   <script>
+     document.getElementById("year").textContent = new Date().getFullYear();
+
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.getElementById('nav-menu');
 
@@ -135,5 +137,6 @@
 
 </body>
 </html> 
+
 
 
