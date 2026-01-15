@@ -97,19 +97,24 @@
       </div>
     </div>
 
-    <div id="footer-bottom">
-      &copy; 2026 BhuOne Joshi. All rights reserved.
-    </div>
-  </footer>
+
+  <div id="footer-bottom">
+  &copy; <span id="year"></span> BhuOne Joshi. All rights reserved.
+</div>
+
 
 
   
    <script src="script.js"></script>
 
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+
 </script>
 
 </body>
 </html>
+
 
 
 
