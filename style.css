@@ -1028,6 +1028,8 @@ body {
 #portfolio-header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  padding-top: 30px;
+
 }
 
 #portfolio-header p {
@@ -1239,6 +1241,7 @@ section h2 {
 .contact-form button:hover {
   background-color: #e55a5a;
 }
+
 
 
 
