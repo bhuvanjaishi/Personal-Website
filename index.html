@@ -294,13 +294,13 @@
       </div>
     </div>
     <div id="footer-bottom">
-      &copy; 2026 BhuOne Joshi. All rights reserved.
+     &copy; <span id="year"></span> BhuOne Joshi. All rights reserved.
     </div>
   </footer>
 
   <script>
 /* ===== MOBILE FULLSCREEN NAV (REAL WORLD) ===== */
-
+document.getElementById("year").textContent = new Date().getFullYear();
 const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('#nav-menu');
 
@@ -359,3 +359,4 @@ document
 
 </body>
 </html>
+
